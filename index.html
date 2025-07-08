@@ -1,54 +1,47 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Atletas </title>
+    <title>Agendador de Tarefas</title>
     <link rel="stylesheet" href="style.css">
-
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h1> Cadastro de Atletas </h1>
-        <form id="athleteForm">
-            <label for="name"> Nome: </label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="posicao"> Posição: </label>
-            <input type="text" id="posicao" name="posicao" required>
-
-            <label for="altura"> Altura (cm): </label>
-            <input type="number" id="altura" name="altura" required>
-
-            <label for="idade"> Idade: </label>
-            <input type="number" id="idade" name="idade" required>
-
-            <label for="cidade"> Cidade: </label>
-            <input type="text" id="cidade" name="cidade" required>
-
-            <button type="submit"> Cadastrar Atleta </button>
-        </form> <br> 
-        
-        <h2> Lista de Atletas </h2>
-        <div class="search-container">
-            <input type="text" id="searchInput" placeholder="Digite para buscar:">
+    <main class="container">
+        <div class="card">
+            <h2>Nova Tarefa</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <input type="text" id="task-description" placeholder="Descrição da tarefa" required>
+                </div>
+                <div class="form-group">
+                    <input type="datetime-local" id="task-datetime" required>
+                </div>
+                <button type="submit" class="btn">Adicionar</button>
+            </form>
         </div>
-        <div id="tableContainer">
-            <table id="athleteTable">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Posição</th>
-                        <th>Altura (cm)</th>
-                        <th>Idade (anos)</th>
-                        <th>Cidade</th>
-                    </tr>
-                </thead>
-                <tbody id="athleteTableBody">
-                    </tbody>
-            </table>
+
+        <div class="card">
+            <h2>Gerenciar Tarefa</h2>
+            <div class="form-group">
+                <input type="text" id="search-id" placeholder="Número único" required>
+            </div>
+            <div class="button-group">
+                <button id="search-button" class="btn btn-secondary">Buscar</button>
+                <button id="remove-button" class="btn btn-danger">Remover</button>
+            </div>
+            <div id="search-result" class="search-result-box">
+                <!-- Resultado aparecerá aqui -->
+            </div>
         </div>
-    </div>
-    <script src="main.js"></script>
-</body>     
+
+        <div class="card">
+            <h2>Minhas Tarefas</h2>
+            <div id="task-list">
+                <p class="empty-state">Nenhuma tarefa agendada</p>
+            </div>
+        </div>
+    </main>
+</body>
 </html>
