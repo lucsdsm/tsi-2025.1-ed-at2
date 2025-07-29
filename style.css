@@ -1,163 +1,47 @@
-/* Reset e configurações globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    background-color: #fafafa;
-    color: #333;
-    line-height: 1.5;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    margin: 0;
 }
 
-/* Container principal */
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-h1 {
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
-    color: #333;
-    font-weight: 500;
-    margin-bottom: 10px;
 }
 
-h2 {
-    color: #444;
-    font-weight: 500;
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
 }
 
-/* Cards */
-.card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    border: 1px solid #e0e0e0;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+nav ul li {
+    border-bottom: 1px solid #ddd;
 }
 
-/* Formulários */
-.form-group {
-    margin-bottom: 15px;
-}
-
-input[type="text"],
-input[type="datetime-local"] {
-    width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    background-color: #f9f9f9;
-}
-
-input:focus {
-    outline: none;
-    border-color: #999;
-    background-color: #fff;
-}
-
-/* Botões */
-.btn {
-    padding: 10px 16px;
-    border: none;
-    border-radius: 6px;
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    background-color: #f0f0f0;
+nav ul li a {
+    display: block; 
+    padding: 15px;
+    text-decoration: none;
     color: #333;
 }
 
-.btn:hover {
+nav ul li a:hover {
     background-color: #e0e0e0;
 }
 
-.btn-primary {
-    background-color: #333;
-    color: #fff;
+nav ul ul {
+    padding-left: 20px; 
+    background-color: #ffffff;
 }
 
-.btn-primary:hover {
-    background-color: #222;
-}
-
-.btn-secondary {
-    background-color: #555;
-    color: white;
-}
-
-.btn-secondary:hover {
-    background-color: #444;
-}
-
-.btn-danger {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.btn-danger:hover {
-    background-color: #c0392b;
-}
-
-.button-group {
-    display: flex;
-    gap: 10px;
-}
-
-/* Resultado da busca */
-.search-result-box {
-    margin-top: 15px;
-    padding: 15px;
-    background-color: #f5f5f5;
-    border-radius: 6px;
+nav ul ul li a {
     color: #555;
-    font-size: 0.9rem;
 }
 
-/* Lista de tarefas */
-#task-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.task-item {
-    background-color: #f9f9f9;
-    padding: 12px 15px;
-    border-radius: 6px;
-    border-left: 3px solid #999;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-.task-item strong {
-    color: #333;
-}
-
-.task-item .task-id {
-    font-size: 0.75rem;
-    color: #777;
-    background-color: #eee;
-    padding: 2px 6px;
-    border-radius: 4px;
-    align-self: flex-start;
-}
-
-.empty-state {
-    color: #999;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9rem;
+main {
+    padding: 1rem;
 }

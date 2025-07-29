@@ -1,47 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendador de Tarefas</title>
+    <title>Menu Hierárquico</title>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js" defer></script>
 </head>
 <body>
-    <main class="container">
-        <div class="card">
-            <h2>Nova tarefa</h2>
-            <form id="task-form">
-                <div class="form-group">
-                    <input type="text" id="task-description" placeholder="Descrição" required>
-                </div>
-                <div class="form-group">
-                    <input type="datetime-local" id="task-datetime" required>
-                </div>
-                <button type="submit" class="btn">Adicionar</button>
-            </form>
-        </div>
-
-        <div class="card">
-            <h2>Gerenciar tarefa</h2>
-            <div class="form-group">
-                <input type="text" id="search-id" placeholder="Número único" required>
-            </div>
-            <div class="button-group">
-                <button id="search-button" class="btn btn-secondary">Buscar</button>
-                <button id="remove-button" class="btn btn-danger">Remover</button>
-            </div>
-            <div id="search-result" class="search-result-box">
-                <!-- Resultado aparecerá aqui -->
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Minhas tarefas</h2>
-            <div id="task-list">
-                <p class="empty-state">Nenhuma tarefa agendada</p>
-            </div>
-        </div>
-    </main>
+    <header>
+        <h1> Menu hierárquico </h1>
+    </header>
+    <nav>
+        <ul id="menu-container"></ul>
+    </nav>
+    
+    <script src="main.js"></script>
 </body>
 </html>
