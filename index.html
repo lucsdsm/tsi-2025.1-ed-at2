@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Hierárquico</title>
+    <title>Menu Hierárquico Interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1> Menu hierárquico </h1>
+        <h1>Menu Hierárquico Interativo</h1>
     </header>
-    <nav>
+
+    <div class="controls-container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Buscar página...">
+        </div>
+
+        <form id="add-item-form">
+            <h3>Adicionar Novo Item ao Menu</h3>
+            <input type="text" id="item-label" placeholder="Nome do novo item" required>
+            <select id="parent-item" required>
+                <option value="root">Adicionar como item principal</option>
+            </select>
+            <button type="submit">Adicionar Item</button>
+        </form>
+    </div>
+    
+    <nav id="main-nav">
+        <button id="menu-toggle">☰ Menu</button>
         <ul id="menu-container"></ul>
     </nav>
-    
+
     <script src="main.js"></script>
 </body>
 </html>
